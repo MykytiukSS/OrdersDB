@@ -19,7 +19,7 @@ public class Goods {
     private Long price;
 
     @OneToMany
-    @JoinColumn(name = "order_id")
+    @JoinColumn(mappedBy = "goods", cascade = CascadeType.ALL)
     private <Orders> order = new Orders();;
 
 
