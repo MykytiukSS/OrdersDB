@@ -12,17 +12,13 @@ public class Orders {
     @GeneratedValue
     private Long id;
 
-    @OneToOne(mappedBy = "order")
-    private Clients client;
+   
 
     @ManyToOne
     @JoinColumn(name = "client_id")
     private Clients client1;
 
 
-
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<Orders> orders = new ArrayList<>();
 
 
 
