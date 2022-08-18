@@ -19,6 +19,9 @@ public class Orders {
     private Clients client1;
 
 
+     @ManyToOne
+    @JoinColumn(name = "goods_id")
+    private Goods goods;
 
 
 
