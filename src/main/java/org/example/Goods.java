@@ -18,9 +18,9 @@ public class Goods {
     @Column(nullable = false)
     private Long price;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "order_id")
-    private Orders order;
+    private <Orders> order = new Orders();;
 
 
 
