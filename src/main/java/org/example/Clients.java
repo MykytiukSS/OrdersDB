@@ -20,12 +20,8 @@ public class Clients {
     private Integer age;
 
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id")
-    private Orders order;
-
     @OneToMany(mappedBy = "client1", cascade = CascadeType.ALL)
-    private List<Goods> goods = new ArrayList<>();
+    private List<Orders> orders= new ArrayList<>();
 
     public Clients() {}
 
@@ -57,6 +53,7 @@ public class Clients {
     public void setAge(int age) {
         this.age = age;
     }
+
 
 
 }
